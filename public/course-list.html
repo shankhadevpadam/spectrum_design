@@ -1,0 +1,578 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spectrum knowledge</title>
+    <link href="styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+</head>
+<body class="bg-gray-100 font-Roboto">
+    <div class="root">
+
+      <header>
+        <div id="head" class="bg-Indigo-500 py-2 px-5 text-xs text-white text-center">
+          <div class="notification max-w-7xl mx-auto relative">
+            <p class="inline">We use cookies to give you a better experience. Carry on browsing if you're happy with this, or read our <a class="text-pink-500" href="#">
+              cookies policy
+            </a> for more information.</p>
+            <a id="close" href="#" class="inline-block absolute bottom-2 right-0">
+              <span class="text-base leading-none">
+                &times;
+              </span>
+            </a>
+          </div>
+        </div>
+        <div id="main" class="grid md:grid-cols-3 gap-4 bg-white shadow-lg px-5 py-2 lg:py-0 lg:border-0 border-b lg:border-none">
+
+          <div class="flex justify-between items-center">
+            <div class="w-3/4">
+              <img src="../img/logo.jpg" alt="logo">
+            </div>
+            <div id="burger" class="px-4 cursor-pointer md:hidden">
+              <svg class="w-10 text-gray-400" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+              </svg>
+            </div>
+          </div>
+          <div id="menu" class="md:col-span-2 md:block hidden">
+            <div class="h-full md:flex md:justify-between">
+              <nav class="md:flex md:items-center relative sm:p-5">
+                <ul>
+                  <li class="md:inline-block lg:border-0 sm:border-b sm:p-2"><a href="#" class="font-medium text-gray-500 hover:text-gray-900 px-5">Home</a></li>
+                  <li class="md:inline-block lg:border-0 sm:border-b sm:p-2"><a href="#" class="font-medium text-gray-500 hover:text-gray-900 px-5">About</a></li>
+                  <li x-data="{ dropdownOpen: false }" class="md:inline-block lg:border-0 sm:border-b sm:p-2 relative">
+                    <svg class="h-5 w-5 lg:absolute lg:right-0 lg:top-2 text-gray-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                    <a href="#" @click="dropdownOpen = !dropdownOpen" class="font-medium text-gray-500 hover:text-gray-900 px-5">Courses</a>
+                    <ul x-show="dropdownOpen" class="md:bg-white md:absolute md:w-96 md:rounded-lg p-8 md:shadow-lg md:ring-1 ring-black ring-opacity-5 overflow-hidden">
+                      <li>
+                        <a href="#" class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
+                          <svg class="flex-shrink-0 h-6 w-6 text-indigo-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                          </svg>
+                          <div class="ml-4">
+                            <p class="text-base font-medium text-gray-900">
+                              Spectrum UCAT
+                            </p>
+                            <p class="mt-1 text-sm text-gray-500">
+                              Spectrum Mock Interviews for Medicine and Dentistry
+                            </p>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
+                          <svg class="flex-shrink-0 h-6 w-6 text-indigo-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                          </svg>
+                          <div class="ml-4">
+                            <p class="text-base font-medium text-gray-900">
+                              Spectrum University Application Review
+                            </p>
+                            <p class="mt-1 text-sm text-gray-500">
+                              Spectrum Mock Interviews for Medicine and Dentistry
+                            </p>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
+                          <svg class="flex-shrink-0 h-6 w-6 text-indigo-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                          </svg>
+                          <div class="ml-4">
+                            <p class="text-base font-medium text-gray-900">
+                              Spectrum WACE
+                            </p>
+                            <p class="mt-1 text-sm text-gray-500">
+                              Spectrum Mock Interviews for Medicine and Dentistry
+                            </p>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
+                          <svg class="flex-shrink-0 h-6 w-6 text-indigo-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                          </svg>
+                          <div class="ml-4">
+                            <p class="text-base font-medium text-gray-900">
+                              Spectrum GATE (For Year 5 students of 2021)
+                            </p>
+                            <p class="mt-1 text-sm text-gray-500">
+                              Spectrum Mock Interviews for Medicine and Dentistry
+                            </p>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
+                          <svg class="flex-shrink-0 h-6 w-6 text-indigo-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                          </svg>
+                          <div class="ml-4">
+                            <p class="text-base font-medium text-gray-900">
+                              Spectrum GAMSAT
+                            </p>
+                            <p class="mt-1 text-sm text-gray-500">
+                              Spectrum Mock Interviews for Medicine and Dentistry
+                            </p>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
+                          <svg class="flex-shrink-0 h-6 w-6 text-indigo-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                          </svg>
+                          <div class="ml-4">
+                            <p class="text-base font-medium text-gray-900">
+                              Spectrum Future Medicine Students
+                            </p>
+                            <p class="mt-1 text-sm text-gray-500">
+                              Spectrum Mock Interviews for Medicine and Dentistry
+                            </p>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
+                          <svg class="flex-shrink-0 h-6 w-6 text-indigo-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                          </svg>
+                          <div class="ml-4">
+                            <p class="text-base font-medium text-gray-900">
+                              Spectrum First Aid
+                            </p>
+                            <p class="mt-1 text-sm text-gray-500">
+                              Spectrum Mock Interviews for Medicine and Dentistry
+                            </p>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
+                          <svg class="flex-shrink-0 h-6 w-6 text-indigo-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                          </svg>
+                          <div class="ml-4">
+                            <p class="text-base font-medium text-gray-900">
+                              Maths – Secondary (Y-8,Y-9,Y-10)
+                            </p>
+                            <p class="mt-1 text-xs text-gray-500">
+                              Spectrum Mock Interviews for Medicine and Dentistry
+                            </p>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="md:inline-block lg:border-0 sm:border-b sm:p-2"><a href="#" class="font-medium text-gray-500 hover:text-gray-900 px-5">FAQ</a></li>
+                  <li class="md:inline-block lg:border-0 sm:border-b sm:p-2"><a href="#" class="font-medium text-gray-500 hover:text-gray-900 px-5">Contact us</a></li>
+                </ul>
+              </nav>
+              <div class="md:flex md:items-center">
+                <span class="mx-2 inline-flex p-2 relative">
+                  <a href="#">
+                    <span class="w-5 h-5 leading-none p-1 bg-green-500 inline-block rounded-full absolute -top-1 -right-1 text-white text-xs text-center">3</span>
+                    <svg class="h-6 w-6 hover:text-indigo-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                  </a>
+                </span>
+                <a href="#" class="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
+                  Sign in
+                </a>
+                <a href="#" class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">
+                  Sign up
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </header>
+
+      <main>
+
+        <!--Hero section-->
+        <div id="hero" class="max-w-7xl mx-auto md:p-10">
+            <div class="bg-Green-500 from-yellow-400 via-red-500 to-pink-500 rounded-lg">
+              <div class="md:p-10">
+                <h1 class="text-white mb-5 md:text-4xl font-bold subpixel-antialiased">Courses to get you started</h1>
+                <h4 class="text-white md:text-xl">Choose from hundreds of online courses from top universities and specialist organisations.</h4>
+                <div class="md:max-w-lg my-10">
+                  <from action="#">
+                    <div class="relative">
+                      <input type="text" class="h-14 w-full border border-gray-300 pl-10 pr-20 rounded-lg focus:shadow focus:outline-none" placeholder="Search course here.">
+                      <div class="absolute top-2 right-2"> 
+                        <button class="h-10 w-20 text-white rounded-lg bg-Indigo-500 hover:bg-Indigo-600">Search</button> 
+                      </div>
+                    </div>
+                  </from>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <!--Section next-->
+        <div class="pb-20">
+            <div class="max-w-7xl mx-auto md:p-10">
+              <div class="font-sans">
+                <h2 class="text-3xl leading-8 font-bold text-gray-900 sm:text-4xl">Course list page.</h2>
+                <h4 class="md:text-2xl text-gray-700 mt-4">Choose from hundreds of online courses from top universities and specialist organisations.</h4>
+              </div>
+              <div class="mt-10">
+                <dl class="space-y-10 md:space-y-0 md:grid md:grid-cols-4 md:gap-x-5 md:gap-y-10">
+    
+                  <div class="shadow-md bg-white rounded-md overflow-hidden">
+                    <dt>
+                      <div class="flex items-center justify-center bg-white text-white hover:bg-gray-300">
+                        <a href="#"><img src="../img/img-1.png" alt="#"/></a>
+                      </div>
+                    </dt>
+                    <dd class="mt-2 text-gray-500 p-4">
+                      <a href="#">
+                        <h4 class="mb-3 leading-6 md:text-md font-bold text-gray-700">Spectrum GATE (For Year 5 students of 2021)</h4>
+                        <span class="inline-block text-sm text-gray-400">Category</span>
+                        <div class="text-xl text-center font-bold text-gray-700 mt-3">
+                            <span>$89.99</span>
+                        </div>
+                        <button class="w-full bg-Indigo-600 text-white text-base font-semibold py-2 px-5 mt-5 rounded-sm shadow-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-purple-200" type="button">
+                            Add to cart
+                        </button>
+                      </a>
+                    </dd>
+                  </div>
+                  <div class="shadow-md bg-white rounded-md overflow-hidden">
+                    <dt>
+                      <div class="flex items-center justify-center bg-white text-white hover:bg-gray-300">
+                        <a href="#"><img src="../img/hero-bg-2.png" alt="#"/></a>
+                      </div>
+                    </dt>
+                    <dd class="mt-2 text-gray-500 p-4">
+                      <a href="#">
+                        <h4 class="mb-3 leading-6 md:text-md font-bold text-gray-700">Spectrum GATE (For Year 5 students of 2021)</h4>
+                        <span class="inline-block text-sm text-gray-400">Category</span>
+                        <div class="text-xl text-center font-bold text-gray-700 mt-3">
+                            <span>$89.99</span>
+                        </div>
+                        <button class="w-full bg-Indigo-600 text-white text-base font-semibold py-2 px-5 mt-5 rounded-sm shadow-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-purple-200" type="button">
+                            Add to cart
+                        </button>
+                      </a>
+                    </dd>
+                  </div>
+                  <div class="shadow-md bg-white rounded-md overflow-hidden">
+                    <dt>
+                      <div class="flex items-center justify-center bg-white text-white hover:bg-gray-300">
+                        <a href="#"><img src="../img/img-4.png" alt="#"/></a>
+                      </div>
+                    </dt>
+                    <dd class="mt-2 text-gray-500 p-4">
+                      <a href="#">
+                        <h4 class="mb-3 leading-6 md:text-md font-bold text-gray-700">Spectrum GATE (For Year 5 students of 2021)</h4>
+                        <span class="inline-block text-sm text-gray-400">Category</span>
+                        <div class="text-xl text-center font-bold text-gray-700 mt-3">
+                            <span>$89.99</span>
+                        </div>
+                        <button class="w-full bg-Indigo-600 text-white text-base font-semibold py-2 px-5 mt-5 rounded-sm shadow-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-purple-200" type="button">
+                            Add to cart
+                        </button>
+                      </a>
+                    </dd>
+                  </div>
+                  <div class="shadow-md bg-white rounded-md overflow-hidden">
+                    <dt>
+                      <div class="flex items-center justify-center bg-white text-white hover:bg-gray-300">
+                        <a href="#"><img src="../img/hero-bg-2.png" alt="#"/></a>
+                      </div>
+                    </dt>
+                    <dd class="mt-2 text-gray-500 p-4">
+                      <a href="#">
+                        <h4 class="mb-3 leading-6 md:text-md font-bold text-gray-700">Spectrum GATE (For Year 5 students of 2021)</h4>
+                        <span class="inline-block text-sm text-gray-400">Category</span>
+                        <div class="text-xl text-center font-bold text-gray-700 mt-3">
+                            <span>$89.99</span>
+                        </div>
+                        <button class="w-full bg-Indigo-600 text-white text-base font-semibold py-2 px-5 mt-5 rounded-sm shadow-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-purple-200" type="button">
+                            Add to cart
+                        </button>
+                      </a>
+                    </dd>
+                  </div>
+
+                  <div class="shadow-md bg-white rounded-md overflow-hidden">
+                    <dt>
+                      <div class="flex items-center justify-center bg-white text-white hover:bg-gray-300">
+                        <a href="#"><img src="../img/hero-bg-2.png" alt="#"/></a>
+                      </div>
+                    </dt>
+                    <dd class="mt-2 text-gray-500 p-4">
+                      <a href="#">
+                        <h4 class="mb-3 leading-6 md:text-md font-bold text-gray-700">Spectrum GATE (For Year 5 students of 2021)</h4>
+                        <span class="inline-block text-sm text-gray-400">Category</span>
+                        <div class="text-xl text-center font-bold text-gray-700 mt-3">
+                            <span>$89.99</span>
+                        </div>
+                        <button class="w-full bg-Indigo-600 text-white text-base font-semibold py-2 px-5 mt-5 rounded-sm shadow-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-purple-200" type="button">
+                            Add to cart
+                        </button>
+                      </a>
+                    </dd>
+                  </div>
+                  <div class="shadow-md bg-white rounded-md overflow-hidden">
+                    <dt>
+                      <div class="flex items-center justify-center bg-white text-white hover:bg-gray-300">
+                        <a href="#"><img src="../img/img-4.png" alt="#"/></a>
+                      </div>
+                    </dt>
+                    <dd class="mt-2 text-gray-500 p-4">
+                      <a href="#">
+                        <h4 class="mb-3 leading-6 md:text-md font-bold text-gray-700">Spectrum GATE (For Year 5 students of 2021)</h4>
+                        <span class="inline-block text-sm text-gray-400">Category</span>
+                        <div class="text-xl text-center font-bold text-gray-700 mt-3">
+                            <span>$89.99</span>
+                        </div>
+                        <button class="w-full bg-Indigo-600 text-white text-base font-semibold py-2 px-5 mt-5 rounded-sm shadow-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-purple-200" type="button">
+                            Add to cart
+                        </button>
+                      </a>
+                    </dd>
+                  </div>
+                  <div class="shadow-md bg-white rounded-md overflow-hidden">
+                    <dt>
+                      <div class="flex items-center justify-center bg-white text-white hover:bg-gray-300">
+                        <a href="#"><img src="../img/img-1.png" alt="#"/></a>
+                      </div>
+                    </dt>
+                    <dd class="mt-2 text-gray-500 p-4">
+                      <a href="#">
+                        <h4 class="mb-3 leading-6 md:text-md font-bold text-gray-700">Spectrum GATE (For Year 5 students of 2021)</h4>
+                        <span class="inline-block text-sm text-gray-400">Category</span>
+                        <div class="text-xl text-center font-bold text-gray-700 mt-3">
+                            <span>$89.99</span>
+                        </div>
+                        <button class="w-full bg-Indigo-600 text-white text-base font-semibold py-2 px-5 mt-5 rounded-sm shadow-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-purple-200" type="button">
+                            Add to cart
+                        </button>
+                      </a>
+                    </dd>
+                  </div>
+                  <div class="shadow-md bg-white rounded-md overflow-hidden">
+                    <dt>
+                      <div class="flex items-center justify-center bg-white text-white hover:bg-gray-300">
+                        <a href="#"><img src="../img/hero-bg-2.png" alt="#"/></a>
+                      </div>
+                    </dt>
+                    <dd class="mt-2 text-gray-500 p-4">
+                      <a href="#">
+                        <h4 class="mb-3 leading-6 md:text-md font-bold text-gray-700">Spectrum GATE (For Year 5 students of 2021)</h4>
+                        <span class="inline-block text-sm text-gray-400">Category</span>
+                        <div class="text-xl text-center font-bold text-gray-700 mt-3">
+                            <span>$89.99</span>
+                        </div>
+                        <button class="w-full bg-Indigo-600 text-white text-base font-semibold py-2 px-5 mt-5 rounded-sm shadow-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-purple-200" type="button">
+                            Add to cart
+                        </button>
+                      </a>
+                    </dd>
+                  </div>
+    
+                </dl>
+                <div class="py-10 flex items-center justify-between border-t border-gray-200 sm:px-6">
+                    <div class="flex-1 flex justify-between sm:hidden">
+                      <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">
+                        Previous
+                      </a>
+                      <a href="#" class="ml-3 relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">
+                        Next
+                      </a>
+                    </div>
+                    <div class="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
+                      <div>
+                        <p class="text-sm text-gray-700">
+                          Showing
+                          <span class="font-medium">1</span>
+                          to
+                          <span class="font-medium">10</span>
+                          of
+                          <span class="font-medium">97</span>
+                          results
+                        </p>
+                      </div>
+                      <div>
+                        <nav class="relative z-0 inline-flex rounded-md shadow-sm -space-x-px" aria-label="Pagination">
+                          <a href="#" class="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                            <span class="sr-only">Previous</span>
+                            <!-- Heroicon name: solid/chevron-left -->
+                            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                              <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                          </a>
+                          <!-- Current: "z-10 bg-indigo-50 border-indigo-500 text-indigo-600", Default: "bg-white border-gray-300 text-gray-500 hover:bg-gray-50" -->
+                          <a href="#" aria-current="page" class="z-10 bg-indigo-50 border-indigo-500 text-indigo-600 relative inline-flex items-center px-4 py-2 border text-sm font-medium">
+                            1
+                          </a>
+                          <a href="#" class="bg-white border-gray-300 text-gray-500 hover:bg-gray-50 relative inline-flex items-center px-4 py-2 border text-sm font-medium">
+                            2
+                          </a>
+                          <a href="#" class="bg-white border-gray-300 text-gray-500 hover:bg-gray-50 hidden md:inline-flex relative items-center px-4 py-2 border text-sm font-medium">
+                            3
+                          </a>
+                          <span class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700">
+                            ...
+                          </span>
+                          <a href="#" class="bg-white border-gray-300 text-gray-500 hover:bg-gray-50 hidden md:inline-flex relative items-center px-4 py-2 border text-sm font-medium">
+                            8
+                          </a>
+                          <a href="#" class="bg-white border-gray-300 text-gray-500 hover:bg-gray-50 relative inline-flex items-center px-4 py-2 border text-sm font-medium">
+                            9
+                          </a>
+                          <a href="#" class="bg-white border-gray-300 text-gray-500 hover:bg-gray-50 relative inline-flex items-center px-4 py-2 border text-sm font-medium">
+                            10
+                          </a>
+                          <a href="#" class="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                            <span class="sr-only">Next</span>
+                            <!-- Heroicon name: solid/chevron-right -->
+                            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                            </svg>
+                          </a>
+                        </nav>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      </main>
+
+      <!--Footer-->
+      <footer class="footer-1 bg-white relative">
+        <div class="-mt-20 top-0 bottom-auto left-0 right-0 w-full absolute text-white" style="height:80px">
+          <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 2560 100" x="0" y="0">
+            <polygon class="currentColor" fill="#fff" points="2560 0 2560 100 0 100"></polygon>
+          </svg>
+        </div>
+        <div class="container mx-auto px-4">
+          <div class="sm:flex sm:flex-wrap py-10">
+            <div class="px-4 mt-4 sm:w-1/3 xl:w-1/6 sm:mx-auto xl:mt-0 xl:ml-auto">
+              <h5 class="text-xl font-bold mb-6 sm:text-center xl:text-left">Stay connected</h5>
+              <div class="flex sm:justify-center xl:justify-start">
+                <a href="" class="bg-white text-lightBlue-400 shadow-lg font-lg p-3 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 inline-block text-center">
+                  <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M11,10h2.6l0.4-3H11V5.3c0-0.9,0.2-1.5,1.5-1.5H14V1.1c-0.3,0-1-0.1-2.1-0.1C9.6,1,8,2.4,8,5v2H5.5v3H8v8h3V10z"></path></svg>
+                </a>
+                <a href="" class="bg-white text-lightBlue-400 shadow-lg font-lg p-3 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 inline-block text-center">
+                  <svg width="17" height="17" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M19,4.74 C18.339,5.029 17.626,5.229 16.881,5.32 C17.644,4.86 18.227,4.139 18.503,3.28 C17.79,3.7 17.001,4.009 16.159,4.17 C15.485,3.45 14.526,3 13.464,3 C11.423,3 9.771,4.66 9.771,6.7 C9.771,6.99 9.804,7.269 9.868,7.539 C6.795,7.38 4.076,5.919 2.254,3.679 C1.936,4.219 1.754,4.86 1.754,5.539 C1.754,6.82 2.405,7.95 3.397,8.61 C2.79,8.589 2.22,8.429 1.723,8.149 L1.723,8.189 C1.723,9.978 2.997,11.478 4.686,11.82 C4.376,11.899 4.049,11.939 3.713,11.939 C3.475,11.939 3.245,11.919 3.018,11.88 C3.49,13.349 4.852,14.419 6.469,14.449 C5.205,15.429 3.612,16.019 1.882,16.019 C1.583,16.019 1.29,16.009 1,15.969 C2.635,17.019 4.576,17.629 6.662,17.629 C13.454,17.629 17.17,12 17.17,7.129 C17.17,6.969 17.166,6.809 17.157,6.649 C17.879,6.129 18.504,5.478 19,4.74"></path></svg>
+                </a>
+                <a href="" class="bg-white text-lightBlue-400 shadow-lg font-lg p-3 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 inline-block text-center">
+                  <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.86,9.09 C18.46,12.12 17.14,16.05 13.81,17.56 C9.45,19.53 4.13,17.68 2.47,12.87 C0.68,7.68 4.22,2.42 9.5,2.03 C11.57,1.88 13.42,2.37 15.05,3.65 C15.22,3.78 15.37,3.93 15.61,4.14 C14.9,4.81 14.23,5.45 13.5,6.14 C12.27,5.08 10.84,4.72 9.28,4.98 C8.12,5.17 7.16,5.76 6.37,6.63 C4.88,8.27 4.62,10.86 5.76,12.82 C6.95,14.87 9.17,15.8 11.57,15.25 C13.27,14.87 14.76,13.33 14.89,11.75 L10.51,11.75 L10.51,9.09 L17.86,9.09 L17.86,9.09 Z"></path></svg>
+                </a>
+              </div>
+            </div>
+            <div class="px-4 sm:w-1/2 md:w-1/4 xl:w-1/6">
+              <h5 class="text-xl font-bold mb-6">Features</h5>
+              <ul class="list-none footer-links">
+                <li class="mb-2">
+                  <a href="#" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Cool stuff</a>
+                </li>
+                <li class="mb-2">
+                  <a href="#" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Random feature</a>
+                </li>
+                <li class="mb-2">
+                  <a href="#" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Team feature</a>
+                </li>
+                <li class="mb-2">
+                  <a href="#" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Stuff for developers</a>
+                </li>
+              </ul>
+            </div>
+            <div class="px-4 sm:w-1/2 md:w-1/4 xl:w-1/6 mt-8 sm:mt-0">
+              <h5 class="text-xl font-bold mb-6">Resources</h5>
+              <ul class="list-none footer-links">
+                <li class="mb-2">
+                  <a href="#" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Resource</a>
+                </li>
+                <li class="mb-2">
+                  <a href="#" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Resource name</a>
+                </li>
+                <li class="mb-2">
+                  <a href="#" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Another resource</a>
+                </li>
+                <li class="mb-2">
+                  <a href="#" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Final resource</a>
+                </li>
+              </ul>
+            </div>
+            <div class="px-4 sm:w-1/2 md:w-1/4 xl:w-1/6 mt-8 md:mt-0">
+              <h5 class="text-xl font-bold mb-6">About</h5>
+              <ul class="list-none footer-links">
+                <li class="mb-2">
+                  <a href="#" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Team</a>
+                </li>
+                <li class="mb-2">
+                  <a href="#" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Locations</a>
+                </li>
+                <li class="mb-2">
+                  <a href="#" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Privacy</a>
+                </li>
+                <li class="mb-2">
+                  <a href="#" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Terms</a>
+                </li>
+              </ul>
+            </div>
+            <div class="px-4 sm:w-1/2 md:w-1/4 xl:w-1/6 mt-8 md:mt-0">
+              <h5 class="text-xl font-bold mb-6">Help</h5>
+              <ul class="list-none footer-links">
+                <li class="mb-2">
+                  <a href="#" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Support</a>
+                </li>
+                <li class="mb-2">
+                  <a href="#" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Help Center</a>
+                </li>
+                <li class="mb-2">
+                  <a href="#" class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+    
+          </div>
+      
+          <div class="flex border-t py-5 px-10 border-b border-gray-100">
+
+            <div class="md:w-3/5 px-5">
+              <h5 class="font-bold uppercase text-gray-500">Subscribe to our newletter</h5>
+              <p>The latest news, articles, an resources, sent to your inbox</p>
+            </div>
+            <div class="md:w-1/3 px-5">
+              <from action="#">
+                  <div class="relative">
+                    <input type="text" class="h-14 w-full px-3 border border-gray-300 rounded-lg focus:shadow focus:outline-none" placeholder="Enter your email.">
+                    <div class="absolute top-2 right-2"> 
+                      <button class="h-10 w-20 text-white rounded-lg bg-Indigo-500 hover:bg-Indigo-600">Search</button> 
+                    </div>
+                  </div>
+                </from>
+            </div>
+            
+          </div>
+
+          <div class="flex py-3 justify-center items-center">
+            <div class="text-gray-500">
+              <p>&copy; Copyright, spectrum, All right reserved.</p>
+            </div>
+          </div>
+
+        </div>
+      </footer>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
