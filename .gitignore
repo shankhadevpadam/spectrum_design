@@ -1,0 +1,4 @@
+/node_modules
+/.phpintel
+npm-debug.log
+yarn-error.log
